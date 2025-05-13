@@ -10,7 +10,7 @@ using TheNevix.Utils.Auth.Configuration;
 namespace TheNevix.Utils.Auth
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-    public class AuthAttribute : AuthorizeAttribute, IAsyncAuthorizationFilter
+    public class AuthAttribute : Attribute, IAsyncAuthorizationFilter
     {
         private readonly string[] _methods;
         private const string AuthMethodKey = "ValidatedAuthMethod";
