@@ -4,12 +4,42 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>TheNevix.Utils.Auth</Title>
+    <Version>1.0.0</Version>
+    <Authors>TheNevix</Authors>
+    <Company>TheNevix</Company>
+    <Description>A simple nuget package to easily manage multiple auth ways for an api endpoint.</Description>
+	 <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	 <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TheNevix/TheNevix.Utils.Auth</RepositoryUrl>
+    <PackageTags>auth; TheNevix</PackageTags>
+    <PackageIcon>Logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
   </ItemGroup>
+
+	<ItemGroup>
+		<None Include="$(MSBuildThisFileDirectory)Logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
